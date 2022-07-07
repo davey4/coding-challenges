@@ -5,5 +5,4 @@
 -- Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
 
 spinWords :: String -> String
-spinWords = unwords . fmap (\x -> if length x > 4 then reverse x else x) . words
-
+spinWords = unwords . fmap (\x -> if length x >= 5 then reverse x else x) . words
